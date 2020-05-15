@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Lora';
+}
+:root {
+    --main-yellow: #FAA61A;
+    --alt-yellow: #FED766;
+    --main-blue: #0A2351;
+    --op-blue: #162E5A;
+    --light-blue: #1675AA;
+    --tweet-blue: #1AB7EA;
+    --grey: #707070;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+/*4All Format*/
+/***MOBILE VERSION***/
+/*The site you are*/
+.nav-list > li:nth-last-child(1) > a {
+    background-color: var(--main-blue);
+    color: var(--main-yellow);
+}
+/*--ENDs the header section*/
+/*CONTENT SECTION*/
+.border-title {
+    display: none;
+}
+main section {
+    padding: 2rem;
+    font-size: 20px;
+}
+.content-info {
+    margin-top: 4rem;
+    width: 100%;
+    text-align: justify;
+    color: var(--grey);
+}
+.content-info h1 {
+    font-size: 1.2rem;
+    color: var(--main-blue);
+    z-index: 998;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.info img {
+    width: 100%;
+    /*margin-top: -5rem;*/
+    object-fit: cover;
+    z-index: 995;
+}
+.info p {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 2.5rem;
+}
+
+.map {
+    background-color: var(--alt-yellow);
+    padding: 2rem 2rem 1rem;
+}
+.map .ifn-map {
+    width: 100%;
+    height: 300px;
+}
+.map p {
+    color: var(--main-blue);
+    font-size: 20px;
+    line-height: 2.5rem;
+}
+.map p a {
+    color: var(--main-blue);
+    text-decoration: underline;
+}
+#formulario form {
+    background-color: rgba( 0, 0, 0, .1);
+    padding: 1rem;
+    font-family: 'Oswald', sans-serif;
+}
+#formulario form label {
+    display: none;
+}
+#formulario form div {
+    margin-bottom: 2rem;
+}
+#formulario form input {
+    width: 100%;
+    text-indent: 1rem;
+    padding: 1rem;
+    border: none;
+    font-family: 'Oswald', sans-serif;
+}
+#formulario form textarea {
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    height: 100px;
+    border: none;
+    resize: vertical;
+    font-family: 'Oswald', sans-serif;
+}
+#formulario form button {
+    border: none;
+    background-color: var(--op-blue);
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .35s ease-out;
+}
+#formulario form button:hover {
+    background-color: var(--main-yellow);
+}
+#formulario form button > i {
+    transform: translateX(0);
+    transition: all .3s ease-out;
+}
+#formulario form button:hover > i {
+    transform: translateX(3px);
+}
+/*FOOTER*/
+.last-section {
+    z-index: 998;
+    background-color: var(--main-blue);
+    color: var(--main-yellow);
+}
+.last-section div:nth-child(1) {
+    padding: 1.2rem;
+}
+.last-section div:nth-child(2) {
+    background-color: #fff;
+}
+.footer-nav-links li{
+    list-style-type: none;
+}
+.footer-nav-links li a{
+    text-decoration: none;
+    color: var(--main-yellow);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 51px;
+    text-transform: uppercase;
+}
+.last-section p {
+    font-size: 18px;
+}
+.f-social-links i {
+    font-size: 2.5rem;
+    color: var(--grey);
+    margin-right: 12px;
+    transition: all .2s ease-in;
+}
+.f-social-links a:hover i {
+    color: #fff;
+}
+.last-section img {
+    width: 100%;
+    z-index: 997;
+}
+/*Ccopyights*/
+footer {
+    margin: 1rem 2rem;
+}
+.footer-cc {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--main-blue);
+    border-top: 2px solid var(--main-blue);
+    padding: 1.5rem;
+    
+}
+/*ENDS-FOOTER*/
+/***MOBILE VERSION***/
+/**/
+/***Desktop VERSION***/
+@media screen and (min-width: 780px) {
+    /*HEADER*/
+    /*Ends-HEADER*/
+    /*CONTENT*/
+    main section {
+        padding-left: 7rem;
+    }
+    .content-info {
+        position: relative;
+        width: 100%;
+        padding-top: 3rem;
+    }
+    .content-info h1 {
+        display: none;
+    }
+    .border-title {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-size: 4rem;
+        z-index: 997;
+        color: var(--main-blue);
+        padding: 1rem;
+        padding-top: 5rem;
+        padding-bottom: 110%;
+        border-right: 1.5px solid var(--main-blue);
+    }
+    .info img {
+        width: 50%;
+        margin-top: -10rem;
+    }
+    .info p {
+        z-index: 997;
+        margin-top: -5rem;
+        font-size: 1.5rem;
+    }
+    .map, #formulario {
+        margin-left: 4.8rem;
+        padding: 2rem 4rem;
+    }
+    .map .ifn-map {
+        height: 70vh;
+        margin-bottom: 2rem;
+    }
+    #formulario form{
+        padding: 5rem;
+        padding-bottom: 2rem;
+    }
+    #formulario form label, .comments p {
+        display: block;
+        color: var(--main-blue);
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    #formulario form input, form .comments textarea {
+        font-size: 20px;
+    }
+    #formulario form div {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+    }
+    
+    /*FOOTER*/
+    .last-section {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        background-color: transparent;
+        color: var(--main-yellow);
+    }
+    .last-section div:nth-child(1) {
+        padding: 0;
+        width: 55%;
+        position: relative;
+    }
+    .last-section div:nth-child(2){
+        width: 45%;
+    }
+    .footer-nav-links {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        height: 50%;
+        background-color: var(--main-blue);
+        padding: 1rem 0 0;
+        z-index: 998;
+    }
+    .footer-nav-links li a{
+        display: inline-block;
+        text-decoration: none;
+        color: var(--main-yellow);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 40px;
+        text-transform: uppercase;
+        transition: all .35s ease;
+        
+    }
+    .footer-nav-links li a:hover {
+        color: var(--alt-yellow);
+    }
+    .last-section p {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 24px;
+        margin-top: -2.4rem;
+        padding: 0 2rem;
+        line-height: 40px;
+        /*width: 100%;*/
+    }
+    .last-section p span {
+        color: var(--main-blue);
+    }
+    .f-social-links {
+        justify-content: space-evenly;
+        /*align-items: center;*/
+        display: flex;
+        width: 100%;
+    }
+    .f-social-links a {
+        position: relative;
+        display: block;
+        color: var(--grey);
+        margin-right: 0;
+        text-decoration: none;
+    }
+    .f-social-links a i {
+        transition: all .3s ease-out;
+        position: absolute;
+        font-size: 3.5rem;
+    }
+    .f-social-links a:hover i {
+        font-size: 5rem;
+        color: var(--main-blue);
+    }
+    .last-section img {
+        width: 105%;
+        height: 100%;
+    
+        /*padding-bottom: 5rem;*/
+    }
+    /*Ccopyights*/
+    footer {
+        margin: 1rem 2rem;
+    }
+    .footer-cc {
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+        font-size: 1rem;
+        color: var(--main-blue);
+        border-top: 2px solid var(--main-blue);
+        padding: 1.5rem;
+        
+    }
+    /*ENDS-FOOTER*/
+}
+/***Desktop VERSION***/
+/*Laptop with 1000px*/
+@media screen and (max-width: 1150px) and (min-width: 760px) {
+    .nav-list a {
+        font-size: 16px;
+    }
+    .border-title {
+        font-size: 2.5rem;
+        padding-bottom: 45%;
+        
+    }
+}
+@media screen and (min-width: 760px) and (max-width: 1040px) {
+    .nav-list a {
+        padding: 0 7px;
+    }
+}
+/**End 1K-px Laptop**/
+/*Tablet with max-930px*/
+@media screen and (min-width: 760px) and (max-width: 930px) {
+    .nav-list a {
+        font-size: 13px;
+        padding: 0 6.5px;
+    }
+
+    /*footer*/
+    .footer-nav-links li a {
+        font-size: 15px;
+    }
+}

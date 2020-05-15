@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon/ifn.png" type="image/png">
+        <link rel="stylesheet" href="stylemenu.css">
+        <link rel="stylesheet" href="styleifncontact.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <title>IFN - Instituto Fermín Naudeau</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html" class="logo-icon">
+                    <img class="logo-icon-desktop" src="images-ifn/Instituto Fermín naudeua/ifn-logo.png" alt="ifn-logo">
+                </a>
+                <a href="index.html" class="logo-icon">
+                    <img class="logo-icon-mobile" src="images-ifn/Instituto Fermín naudeua/ifn.png" alt="ifn logo">
+                </a>
+                
+                <div class="menu-icons">
+                    <p>MENÚ</p>
+                    <i class="menu-bars fas fa-bars"></i>
+                    <i class="menu-close fas fa-times"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Noticias y Actividades</a></li>
+                    <li>
+                        <a href="about.html">
+                            Sobre Nosotros 
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">Historia</a></li>
+                            <li><a href="about-myv.html">Misión y Visión</a></li>
+                            <li><a href="about-banda.html">Banda-IFN</a></li>
+                            <li><a href="about.html">Asoc.Padres de Flia.</a></li>
+                            <li><a href="about-himno.html">Nuestro Himno</a></li>
+                            <li><a href="about.html">AFIFEN</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Información Académica</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+        <!--Ends the Header section-->
+        <!--Content-->
+        <main>
+            <p class="border-title">
+                C<br>o<br>n<br>t<br>a<br>c<br>t<br>o
+            </p>
+            <section id="History" class="content-info">
+                <h1>
+                    Contacto
+                </h1>
+                <div class="info">
+                    <img src="images-ifn/Instituto Fermín naudeua/7.png" alt="IFN logo">
+                    <p>
+                        Información de Contacto:<br>
+                        <i class="fas fa-map-marker-alt"></i> Dirección: La Locería, Bethania, Panamá.<br>
+                        <i class="fas fa-phone-alt"></i> (507)...-....
+                    </p>
+                </div>
+            </section>
+            <section class="map">
+                <iframe class="ifn-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.7530537058474!2d-79.53882258589513!3d8.994856192001095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8f53f7899d7%3A0xb6af17da7707feb9!2sInstituto%20Ferm%C3%ADn%20Naudeau!5e0!3m2!1sen!2spa!4v1583509707269!5m2!1sen!2spa" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <p>
+                    Gracias por visitar nuestro sitio web. <br>
+                    Si tiene comentarios sobre su experiencia o el contenido de este sitio, complete <a href="#formulario">este formulario.</a>
+                </p>
+            </section>
+            <section id="formulario">
+                <p>
+                    Valoramos sus comentarios y sugerencias, incluso si no podemos responderle personalmente.
+                    <br><br><br>
+                    Todos los campos en el siguiente formulario son obligatorios.**
+                </p>
+                <br><br>
+                <form action="/submit-info">
+                    <div>
+                        <label for="name">Nombre</label>
+                        <input 
+                        type="text" 
+                        name="name" 
+                        id="name"
+                        placeholder="*Nombre"
+                        required>
+                    </div>
+                    <div>
+                        <label for="lastname">Apellido</label>
+                        <input 
+                        type="text" 
+                        name="lastname" 
+                        id="lastname"
+                        placeholder="*Apellido"
+                        required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input 
+                        type="email" 
+                        name="email" 
+                        id="email"
+                        placeholder="*example@mail.com"
+                        required>
+                    </div>
+                    <div class="comments">
+                        <p>Comentarios</p>
+                        <textarea 
+                        name="comments" 
+                        id="comments"
+                        placeholder="Coméntanos..."></textarea>
+                    </div>
+                    <br><br>
+                    <button type="submit">
+                        Enviar <i class="fas fa-chevron-right"></i>
+                    </button>
+                </form>
+                
+            </section>
+        </main>
+
+        <section class="last-section">
+            <div>
+                <ul class="footer-nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Noticias y Actividades</a></li>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="#">Información Académica</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+                <p>
+                    Dirección: 
+                    <br>
+                    <span>La Locería, Bethania, Panamá</span>
+                </p>
+                <br>
+                <div class="f-social-links">
+                    <a href="#" alt="facebook">
+                        <i class="fab fa-facebook-square"></i>                     
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-youtube-square"></i>
+                    </a>
+                    <a href="#" alt="linked-in">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="images-ifn/Instituto Fermín naudeua/banner.png" alt="ifn-logo">
+            </div>
+        </section>
+        <br>
+        <footer>
+            <p class="footer-cc">© 2020 Estudiantes del Instituto Fermín Naudeau</p>
+        </footer>
+        <script src="menu.js"></script>
+    </body>
+</html>

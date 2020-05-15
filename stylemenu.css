@@ -1,0 +1,235 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Lora';
+    overflow-x: hidden;
+}
+
+:root {
+    --main-yellow: #FAA61A;
+    --alt-yellow: #FED766;
+    --main-blue: #0A2351;
+    --op-blue: #162E5A;
+    --light-blue: #1675AA;
+    --tweet-blue: #1AB7EA;
+    --grey: #707070;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+/*4All Format*/
+/***MOBILE VERSION***/
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+nav {
+    background-color: var(--main-blue);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    transition: all 1s ease-in;
+}
+.logo-icon img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 110%;
+    display: flex;
+}
+.logo-icon:nth-child(1),.logo-icon-desktop {
+    display: none;
+}
+
+.logo-icon-mobile {
+    display: block;
+}
+.nav-list {
+    position: fixed;
+    top: 65px;
+    right: 0;
+    background-color: var(--op-blue);
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 10px;
+    display: none;
+}
+.nav-list > li {
+    line-height: 40px;
+}
+.nav-list a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+}
+.nav-list a:hover {
+    color: var(--main-yellow);
+}
+.sub-menu {
+    position: initial;
+    border: 3px solid transparent;
+    border-left-color: var(--main-yellow);
+    margin-left: 10px;
+    z-index: 1000;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all 650ms ease;
+    max-height: initial;
+    padding-left: 10px;
+}
+.menu-icons {
+    display: flex;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 200;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 999;
+    align-items: center;
+}
+.menu-icons p {
+    font-size: 20px;
+    padding-right: 10px;
+}
+.menu-icons .menu-close {
+    display: none;
+}
+
+/*open & close menu*/
+nav.active .menu-close {
+    display: block;
+    transition: all 1s ease-in;
+}
+nav.active .menu-bars {
+    display: none;
+    transition: all 1s ease-in;
+}
+nav.active .nav-list {
+    display: flex;
+    transition: all 1s ease-in;
+}
+nav.active html {
+    overflow-y: hidden;
+}
+/***DESKTOP VERSION***/
+
+@media screen and (min-width: 780px) {
+    /*HEADER*/
+    header {
+        transition: all .3s ease-in;
+    }
+    header:hover {
+        box-shadow: 0 5px 10px #111;
+    }
+    nav {
+        height: 80px;
+        background-color: #fff;
+    }
+    .menu-icons {
+        display: none;
+    }
+    
+    .logo-icon img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: flex;
+    }
+    .logo-icon:nth-child(2),.logo-icon-mobile {
+        display: none;
+    }
+    nav p {
+        display: none;
+    }
+    .logo-icon:nth-child(1),.logo-icon-desktop {
+        display: block;
+    }
+    .nav-list {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: 15.5%;
+        z-index: 999;
+        background-color: transparent;
+        padding-left: 0;
+        overflow: hidden;
+    }
+    
+    .nav-list li {
+        line-height: 80px;
+        position: static;
+    }
+    
+    .nav-list a {
+        display: block;
+        color: var(--grey);
+        padding: 0 15px;
+        font-size: 18.5px;
+        text-transform: uppercase;
+        transition: all .25s;
+    }
+    .nav-list a:hover {
+        color: var(--main-yellow);
+        background-color: var(--main-blue);
+    }
+    .sub-menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        border: none;
+        border-top: 3px solid var(--main-blue);
+        background-color: var(--main-blue);
+        max-height: none;
+        margin-left: 0;
+        padding-left: 0;
+        transition: all .35s ease;
+        visibility: hidden;
+        opacity: 0;
+        bottom: -20px;
+    }
+    .sub-menu li {
+        display: block;
+        line-height: 40px;
+        z-index: 999;
+    }
+    .sub-menu a {
+        color: #eee;
+    }
+    .nav-list li:hover > .sub-menu {
+        bottom: -40px;
+        opacity: 1;
+        visibility: visible;
+    }
+    /*End the Nav*/
+    /*Ends-HEADER*/
+}
